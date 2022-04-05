@@ -23,6 +23,7 @@ class UserManager(BaseUserManager):
         """ Creates and saves new superuser """
         user = self.create_user(email, password)
         user.is_superuser = True
+        user.is_active = True
         user.is_staff = True
         user.save(using=self._db)
         return user
