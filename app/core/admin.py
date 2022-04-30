@@ -21,5 +21,29 @@ class UserAdmin(BaseUserAdmin):
     )
 
 
+@admin.register(models.Dishwasher)
+class DishwasherAdmin(admin.ModelAdmin):
+    list_display = ('model', 'brand_name', 'price', 'color',
+                    'colored_name')
+    list_filter = ('price', 'brand_name', 'color')
+    # fields = [('model', 'brand_name'), ('price', 'color')]
+    fieldsets = (
+        ('General Info', {
+            'fields': ('brand_name', 'model'),
+        }),
+        ('Advanced Option', {
+            'fields': (
+                ('price', 'color'),
+            )
+        }),
+    )
+    search_fields = ['model']
+
+
 admin.site.register(models.User, UserAdmin)
 admin.site.register(models.Tag)
+admin.site.register(models.Brand)
+admin.site.register(models.Category)
+admin.site.register(models.Promo)
+admin.site.register(models.Notebook)
+admin.site.register(models.Ingredient)

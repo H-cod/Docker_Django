@@ -18,6 +18,7 @@ from django.urls import path, include
 
 
 urlpatterns = [
+    # path('grappeli/', include('grappelli.urls')),
     path('admin/', admin.site.urls),
     path('api/user/', include('user.urls', namespace='user')),
     path('api/recipe/', include('recipe.urls', namespace="recipe")),
