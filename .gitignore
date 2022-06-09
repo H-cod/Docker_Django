@@ -1,1 +1,9 @@
 venv/
+app/core/__pycache__/models.cpython-39.pyc
+.idea/workspace.xml
+app/app/__pycache__
+app/core/__pycache__
+app/core/tests/__pycache__
+app/recipe/__pycache__
+app/core/migrations/__pycache__
+app/recipe/tests/__pycache__/test_recipe_api.cpython-39.pyc
