@@ -33,6 +33,7 @@ class UserManager(BaseUserManager):
 
 class User(AbstractBaseUser, PermissionsMixin):
     """ Custom user model that's supports email instead of username """
+
     email = models.EmailField(max_length=255, unique=True)
     name = models.CharField(max_length=255)
     is_active = models.BooleanField(default=True)
@@ -140,6 +141,7 @@ class Ingredient(models.Model):
 
 
 class Recipe(models.Model):
+    """Implementing Recipe model"""
 
     user = models.ForeignKey(settings.AUTH_USER_MODEL,
                              on_delete=models.CASCADE)
