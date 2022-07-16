@@ -10,7 +10,6 @@ from django.conf import settings
 from rest_framework import viewsets, mixins
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
-from rest_framework import serializers
 
 from core.models import Tag, Ingredient, Recipe
 from recipe.serializers import (TagSerializer, IngredientSerializer,

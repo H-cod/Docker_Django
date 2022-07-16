@@ -14,7 +14,7 @@ RECIPE_URL = reverse('recipe:recipe-list')
 
 
 def sample_tag(user, name="Main course"):
-    """Creat and return sample tag"""
+    """Create and return sample tag"""
     return Tag.objects.create(user=user, name=name)
 
 
@@ -108,4 +108,3 @@ class PrivateRecipeApiTest(TestCase):
         serializer = RecipeDetailSerializer(recipe)
 
         self.assertEqual(res.data, serializer.data)
-
